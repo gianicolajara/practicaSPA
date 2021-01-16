@@ -25,7 +25,7 @@ const scrollInfinite = (entries) => {
         url = `${api.SEARCH}&page=${api.page}`;
       }
 
-      console.log(api.page);
+      document.querySelector(".loader").style.display = "block";
 
       ajax({
         url,
@@ -45,7 +45,7 @@ export const observerData = () => {
 
   let lastChildrenMain;
   if (!hash || hash === "#/" || hash.includes("#/buscar=")) {
-    lastChildrenMain = $main.children[api.PER_PAGE * api.page];
+    lastChildrenMain = $main.children[api.PER_PAGE * api.page - 1];
   } else {
     return false;
   }
