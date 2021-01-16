@@ -1,8 +1,9 @@
 import { Header } from "./components/Header.js";
 import { Main } from "./components/Main.js";
 import { Router } from "./components/Router.js";
+import { observerData } from "./helpers/scrollInfinite.js";
 
-export const app = () => {
+export const app = async () => {
   const d = document,
     $root = d.getElementById("root");
 
@@ -10,5 +11,6 @@ export const app = () => {
 
   $root.appendChild(Header());
   $root.appendChild(Main());
-  Router();
+  await Router();
+  observerData();
 };

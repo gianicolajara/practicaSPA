@@ -7,9 +7,9 @@ export const PostCard = (props) => {
   $postCard.innerHTML = `
         <div class="card__head">
             <img src="${
-              _embedded["wp:featuredmedia"][0]
+              _embedded["wp:featuredmedia"]
                 ? _embedded["wp:featuredmedia"][0].source_url
-                : "../assets/img/logo.png"
+                : "./public/assets/img/logo.png"
             }" class="card__img">
         </div>
         <div class="card__body">

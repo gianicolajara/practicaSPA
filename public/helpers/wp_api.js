@@ -20,4 +20,5 @@ export default {
   SEARCH,
   POST_SLUG,
   page,
+  PER_PAGE,
 };
