@@ -11,7 +11,7 @@ export const Router = async () => {
     { hash } = location,
     $main = document.querySelector("main");
 
-  $main.appendChild(Loader());
+  $main.insertAdjacentElement("afterend", Loader());
   const $loader = document.querySelector(".loader");
 
   if (!hash || hash === "#/") {
