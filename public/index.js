@@ -6,6 +6,6 @@ const d = document,
 
 d.addEventListener("DOMContentLoaded", app);
 w.addEventListener("hashchange", () => {
-  app();
   api.page = 1;
+  app();
 });
